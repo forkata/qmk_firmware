@@ -3,19 +3,19 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 0: Base
    * ,-----------------------------------------------------------.
-   * |Esc  |  Q|  w|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]| Bspc|
+   * |Esc  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]| Bspc|
    * |-----------------------------------------------------------|
    * |Tab  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|    Enter|
    * |-----------------------------------------------------------|
-   * |Shift    |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|   /|Shft|Fn4|
-   * |-----------------------------------------------------------'
-   * |Ctrl | Gui| Alt|            Space          |Fn0|Fn1|Fn2|Fn3|
+   * |Shift  |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|    /|  -|    =|
+   * |-----------------------------------------------------------|
+   * |Ctrl | Gui| Alt|         Space         | Fn0| Fn1| Fn2| Fn3|
    * `-----------------------------------------------------------'
    */
 [0] = KEYMAP(
   ESC,  Q,  W,  E,  R,  T,  Y,  U,  I,  O,  P, LBRC,  RBRC, BSPC, \
   TAB,  A,  S,  D,  F,  G,  H,  J,  K,  L,  SCLN,  QUOT,  ENTER, \
-  LSFT,  Z,  X, C,  V,  B,  N,  M, COMMA,  DOT,  SLASH,  RSFT,  FN4, \
+  LSFT,  Z,  X, C,  V,  B,  N,  M, COMMA,  DOT,  SLASH,  MINS,  EQL, \
   LCTL,  LGUI,  LALT, SPC,  FN0, FN1, FN2, FN3 \
 ),
 
@@ -25,33 +25,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------|
    * |`    |  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  ||         |
    * |-----------------------------------------------------------|
-   * |         |   |   |   |   |   |   |   |   |   |    |    |   |
-   * |-----------------------------------------------------------'
-   * |    |    |     |                           |   |   |   |   |
+   * |Trans  |   |   |   |   |   |   |   |   |   |     |    |    |
+   * |-----------------------------------------------------------|
+   * |Trns |Trns|Trns|          Trans        |Trns|Trns|Trns|Trns|
    * `-----------------------------------------------------------'
    */
 [1] = KEYMAP(
   TILD, EXLM,  AT,  HASH,  DLR,  PERC,  CIRC,  AMPR,  ASTR,  LPRN,  RPRN,  UNDS, PLUS, DEL, \
-  GRV,  1,  2,  3,  4,  5,  6,  7,  8,  9,  0,  PIPE,  TRNS, \
-  TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-  TRNS,  TRNS,  TRNS, TRNS, TRNS, TRNS, TRNS, TRNS \
+  GRV,  1,  2,  3,  4,  5,  6,  7,  8,  9,  0,  PIPE,  NO, \
+  TRNS, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, \
+  TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS \
 ),
 
   /* 2: Fn1
    * ,-----------------------------------------------------------.
-   * |     |   | Up|   |   |   |   |   |   |   |   |   |   |     |
+   * |     |   | Up|   |   |   |   | F1| F2| F3| F4|   |   |     |
    * |-----------------------------------------------------------|
-   * |     |Lef|Dow|Rig|   |   |   |   |   |   |   |   |         |
+   * |     |Lef|Dow|Rig|   |   |   | F5| F6| F7| F8|   |         |
    * |-----------------------------------------------------------|
-   * |         |   |   |   |   |   |   |   |   |   |    |    |   |
-   * |-----------------------------------------------------------'
-   * |    |    |     |                           |   |   |   |   |
+   * |Trans  |   |   |   |   |   |   | F9| F10|F11|  F12|   |    |
+   * |-----------------------------------------------------------|
+   * |Trns |Trns|Trns|          Trans        |Trns|Trns|Trns|Trns|
    * `-----------------------------------------------------------'
    */
 [2] = KEYMAP(
-  TRNS, TRNS, UP,   TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-  TRNS, LEFT, DOWN, RGHT, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-  TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+  NO, NO, UP,   NO, NO, NO, NO, F1, F2, F3, F4, NO, NO, NO, \
+  NO, LEFT, DOWN, RGHT, NO, NO, NO, F5, F6, F7, F8, NO, NO, \
+  TRNS, NO, NO, NO, NO, NO, NO, F9, F10, F11, F12, NO, NO, \
   TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS \
 )
 };
