@@ -3,9 +3,9 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 0: Base
    * ,-----------------------------------------------------------.
-   * |Esc  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]| Bspc|
+   * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]| Bspc|
    * |-----------------------------------------------------------|
-   * |Tab  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|    Enter|
+   * |Esc  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|    Enter|
    * |-----------------------------------------------------------|
    * |Shift  |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|    /|  -|    =|
    * |-----------------------------------------------------------|
@@ -13,8 +13,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------'
    */
 [0] = KEYMAP(
-  ESC,  Q,  W,  E,  R,  T,  Y,  U,  I,  O,  P, LBRC,  RBRC, BSPC, \
-  TAB,  A,  S,  D,  F,  G,  H,  J,  K,  L,  SCLN,  QUOT,  ENTER, \
+  TAB,  Q,  W,  E,  R,  T,  Y,  U,  I,  O,  P, LBRC,  RBRC, BSPC, \
+  ESC,  A,  S,  D,  F,  G,  H,  J,  K,  L,  SCLN,  QUOT,  ENTER, \
   LSFT,  Z,  X, C,  V,  B,  N,  M, COMMA,  DOT,  SLASH,  MINS,  EQL, \
   LCTL,  LGUI,  LALT, SPC,  FN0, FN1, FN2, FN3 \
 ),
@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------|
    * |`    |  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  ||         |
    * |-----------------------------------------------------------|
-   * |Trans  |   |   |   |   |   |   |   |   |   |     |    |    |
+   * |Trans  |   |   |   |   |   |   |   |   |   |    \|    |    |
    * |-----------------------------------------------------------|
    * |Trns |Trns|Trns|          Trans        |Trns|Trns|Trns|Trns|
    * `-----------------------------------------------------------'
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [1] = KEYMAP(
   TILD, EXLM,  AT,  HASH,  DLR,  PERC,  CIRC,  AMPR,  ASTR,  LPRN,  RPRN,  UNDS, PLUS, DEL, \
   GRV,  1,  2,  3,  4,  5,  6,  7,  8,  9,  0,  PIPE,  NO, \
-  TRNS, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, \
+  TRNS, NO, NO, NO, NO, NO, NO, NO, NO, NO, BSLS, NO, NO, \
   TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS \
 ),
 
